@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-title>Editar Conta Pessoa Física</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput [value]="userAccount.nome" placeholder="Nome Completo" name="nome" disable>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [value]="userAccount.tel" placeholder="Telefone" name="tel" disable>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [value]="userAccount.cpf" placeholder="CPF" name="cpf" disable>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [value]="userAccount.rg" placeholder="RG" name="RG" disable>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [value]="userAccount.end" placeholder="Endereço Completo" name="end" disable>
+        </mat-form-field>
+        <mat-form-field>
+            <select matNativeControl [value]="userAccount.tipodeconta" required name="tipodeconta" disable>
+                <option value="Conta Corrente">Conta Corrente</option>
+                <option value="Conta Poupança">Conta Poupança</option>
+
+              </select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [value]="userAccount.email" placeholder="Email" name="email" disable>
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button (click)="deleteUser()" class="buttons">
+        <i class="material-icons">
+            delete
+        </i>
+        Deletar Conta
+        </button>
+        <button mat-raised-button (click)="cancel()" class="buttons">
+            <i class="material-icons">
+                cancel
+            </i>
+            Cancelar
+        </button>
+</mat-card>

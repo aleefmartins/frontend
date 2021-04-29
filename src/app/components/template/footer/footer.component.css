@@ -1,0 +1,12 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.nome-rodape {
+    padding-left:5px;
+}
+.nome-rodape {
+    padding-right:5px;
+}
