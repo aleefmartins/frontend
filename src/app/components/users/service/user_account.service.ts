@@ -11,7 +11,7 @@ import {catchError, map} from "rxjs/operators";
 export class UserAccountService {
 
 
-  baseUrl = "http://localhost:3001/UserAccount";
+  baseUrl = "http://localhost:8083/userAccount";
 
 
   constructor(private snackBar: MatSnackBar,
@@ -34,7 +34,7 @@ export class UserAccountService {
   }
 
   read(): Observable<UserAccount[]> {
-    return this.http.get<UserAccount[]>(this.baseUrl).pipe(
+    return this.http.get<UserAccount[]>(this.baseUrl + '/all').pipe(
         map( obj => obj),
         catchError(e => this.errorHandler(e))
     );

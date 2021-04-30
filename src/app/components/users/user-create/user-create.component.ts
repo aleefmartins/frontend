@@ -12,13 +12,13 @@ import {Router} from "@angular/router";
 export class UserCreateComponent implements OnInit {
 
   userAccount: UserAccount = {
-    nome: '',
-    tel:'',
-    cpf: '',
-    rg:'',
-    end: '',
-    tipodeconta:'',
-    email: ''
+    userName: '',
+    userPhone:'',
+    userCpf: '',
+    userRg:'',
+    userEndereco: '',
+    userTipoConta:'',
+    userEmail: ''
   };
 
   constructor(private userAccountService: UserAccountService,

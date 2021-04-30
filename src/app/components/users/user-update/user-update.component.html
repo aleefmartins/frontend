@@ -2,29 +2,29 @@
     <mat-card-title>Editar Conta</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.nome" placeholder="Nome Completo" name="nome">
+            <input matInput [(ngModel)]="userAccount.userName" placeholder="Nome Completo" name="userName">
         </mat-form-field>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.tel" placeholder="Telefone" name="tel">
+            <input matInput [(ngModel)]="userAccount.userPhone" placeholder="Telefone" name="userPhone">
         </mat-form-field>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.cpf" placeholder="CPF" name="cpf">
+            <input matInput [(ngModel)]="userAccount.userCpf" placeholder="CPF" name="userCpf">
         </mat-form-field>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.rg" placeholder="RG" name="RG">
+            <input matInput [(ngModel)]="userAccount.userRg" placeholder="RG" name="userRg">
         </mat-form-field>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.end" placeholder="Endereço Completo" name="end">
+            <input matInput [(ngModel)]="userAccount.userEndereco" placeholder="Endereço Completo" name="userEndereco">
         </mat-form-field>
         <mat-form-field>
-            <select matNativeControl [(ngModel)]="userAccount.tipodeconta" required name="tipodeconta">
+            <select matNativeControl [(ngModel)]="userAccount.userTipoConta" required name="userTipoConta">
                 <option value="Conta Corrente">Conta Corrente</option>
                 <option value="Conta Poupança">Conta Poupança</option>
 
               </select>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [(ngModel)]="userAccount.email" placeholder="Email" name="email">
+            <input matInput [(ngModel)]="userAccount.userEmail" placeholder="Email" name="userEmail">
         </mat-form-field>
 
     </form>

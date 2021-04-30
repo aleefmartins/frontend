@@ -27,12 +27,12 @@ export class UserUpdateComponent implements OnInit {
   editarUsuario(): void {
     this.userAccountService.update(this.userAccount).subscribe(() => {
     this.userAccountService.showMenssage('Conta atualizada com sucesso!');
-    this.router.navigate(['/userAccount']);
+    this.router.navigate(['/users']);
    })
   }
 
   cancel(): void {
-    this.router.navigate(['/userAccount']);
+    this.router.navigate(['/users']);
   }
 
 }

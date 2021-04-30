@@ -19,7 +19,7 @@ export class UserDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = this.route.snapshot.paramMap.get('userId')!;
-    this.userAccountService.readById('userid').subscribe(userAccount => {
+    this.userAccountService.readById(userId).subscribe(userAccount => {
       this.userAccount = userAccount;
     })
   }
@@ -27,12 +27,12 @@ export class UserDeleteComponent implements OnInit {
   deleteUser(): void {
     this.userAccountService.deletProduct(this.userAccount.userId!).subscribe(() => {
       this.userAccountService.showMenssage('Produto excluido com sucesso');
-      this.router.navigate(['/userAccount']);
+      this.router.navigate(['/users']);
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/userAccount']);
+    this.router.navigate(['/users']);
   }
 
 }

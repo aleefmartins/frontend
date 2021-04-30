@@ -2,29 +2,29 @@
     <mat-card-title>Editar Conta Pessoa Física</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput [value]="userAccount.nome" placeholder="Nome Completo" name="nome" disable>
+            <input matInput [value]="userAccount.userName" placeholder="Nome Completo" name="userName" disable>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [value]="userAccount.tel" placeholder="Telefone" name="tel" disable>
+            <input matInput [value]="userAccount.userPhone" placeholder="Telefone" name="userPhone" disable>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [value]="userAccount.cpf" placeholder="CPF" name="cpf" disable>
+            <input matInput [value]="userAccount.userCpf" placeholder="CPF" name="userCpf" disable>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [value]="userAccount.rg" placeholder="RG" name="RG" disable>
+            <input matInput [value]="userAccount.userRg" placeholder="RG" name="userRg" disable>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [value]="userAccount.end" placeholder="Endereço Completo" name="end" disable>
+            <input matInput [value]="userAccount.userEndereco" placeholder="Endereço Completo" name="userEndereco" disable>
         </mat-form-field>
         <mat-form-field>
-            <select matNativeControl [value]="userAccount.tipodeconta" required name="tipodeconta" disable>
+            <select matNativeControl [value]="userAccount.userTipoConta" required name="userTipoConta" disable>
                 <option value="Conta Corrente">Conta Corrente</option>
                 <option value="Conta Poupança">Conta Poupança</option>
 
               </select>
         </mat-form-field>
         <mat-form-field>
-            <input matInput [value]="userAccount.email" placeholder="Email" name="email" disable>
+            <input matInput [value]="userAccount.userEmail" placeholder="Email" name="userEmail" disable>
         </mat-form-field>
 
     </form>
