@@ -12,6 +12,12 @@
             <td mat-cell *matCellDef="let row">{{row.userCpf}}</td>
         </ng-container>
 
+        <ng-container matColumnDef="userTipoConta">
+            <th mat-header-cell *matHeaderCellDef >Tipo de Conta</th>
+            <td mat-cell *matCellDef="let row">{{row.userTipoConta}}</td>
+        </ng-container>
+
+
                 <!-- Email Column -->
                 <ng-container matColumnDef="userEmail">
                     <th mat-header-cell *matHeaderCellDef >Email</th>

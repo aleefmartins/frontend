@@ -11,7 +11,7 @@ import { UserAccount } from '../model/user_account.model';
 export class UserListComponent implements OnInit {
 
   userAccount: UserAccount[];
-  displayedColumns = ['userName', 'userCpf', 'userEmail','action'];
+  displayedColumns = ['userName', 'userCpf', 'userEmail', 'userTipoConta','action'];
 
   constructor(private userAccountService: UserAccountService) {
     this.userAccount = [];

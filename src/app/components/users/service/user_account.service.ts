@@ -1,7 +1,7 @@
 import { UserAccount } from './../model/user_account.model';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {EMPTY, Observable} from "rxjs";
 import {catchError, map} from "rxjs/operators";
 
@@ -11,7 +11,7 @@ import {catchError, map} from "rxjs/operators";
 export class UserAccountService {
 
 
-  baseUrl = "http://localhost:8083/userAccount";
+  baseUrl = "http://ec2-18-189-157-168.us-east-2.compute.amazonaws.com:3038/userAccount";
 
 
   constructor(private snackBar: MatSnackBar,
@@ -50,18 +50,12 @@ export class UserAccountService {
 
   update(userAccount: UserAccount): Observable<UserAccount> {
     const url = `${this.baseUrl}/${userAccount.userId}`;
-    return this.http.put<UserAccount>(url, userAccount).pipe(
-        map( obj => obj),
-        catchError(e => this.errorHandler(e))
-    );
+    return this.http.put<UserAccount>(url, userAccount);
   }
 
   deletProduct(userId: string): Observable<UserAccount> {
     const url = `${this.baseUrl}/${userId}`;
-    return this.http.delete<UserAccount>(url).pipe(
-        map( obj => obj),
-        catchError(e => this.errorHandler(e))
-    );
+    return this.http.delete<UserAccount>(url);
   }
 
   errorHandler(e: any): Observable<any> {

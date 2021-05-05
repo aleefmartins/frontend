@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserUpdateComponent } from './user-update.component';
 
@@ -22,4 +22,10 @@ describe('UserUpdateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have 'Product List Component' as title`, async(() => {
+    fixture = TestBed.createComponent(UserUpdateComponent);
+    component = fixture.debugElement.componentInstance;
+    expect(component.title).toEqual('Atualização de Cadastro');
+  }));
 });

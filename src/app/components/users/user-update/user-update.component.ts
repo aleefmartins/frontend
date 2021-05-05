@@ -9,6 +9,8 @@ import { UserAccount } from '../model/user_account.model';
   styleUrls: ['./user-update.component.css']
 })
 export class UserUpdateComponent implements OnInit {
+  
+  title = "Atualização de Cadastro";
 
   userAccount!: UserAccount;
 

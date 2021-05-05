@@ -1,9 +1,9 @@
 export interface UserAccount {
     userId?: string,
     userName: string,
-    userPhone: string,
-    userCpf: string,
-    userRg: string,
+    userPhone: number,
+    userCpf: number,
+    userRg: number,
     userEndereco: string,
     userTipoConta: string,
     userEmail: string,

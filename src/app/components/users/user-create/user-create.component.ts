@@ -13,9 +13,9 @@ export class UserCreateComponent implements OnInit {
 
   userAccount: UserAccount = {
     userName: '',
-    userPhone:'',
-    userCpf: '',
-    userRg:'',
+    userPhone: 0,
+    userCpf: 0,
+    userRg: 0,
     userEndereco: '',
     userTipoConta:'',
     userEmail: ''
@@ -28,7 +28,7 @@ export class UserCreateComponent implements OnInit {
 
   }
 
-  cadastrarUsuario(): void {
+  createUser(): void {
     this.userAccountService.create(this.userAccount).subscribe(() => {
       this.userAccountService.showMenssage('Operação realizada com sucesso')
       this.router.navigate(['/userAccount'])

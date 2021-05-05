@@ -1,5 +1,8 @@
 <mat-card>
     <mat-card-title>Cadastrar conta Pessoa Física</mat-card-title>
+    <mat-card-subtitle class="subtitle">
+        Preencha os campos abaixo e cadastre a conta.
+        </mat-card-subtitle>
     <form>
         <mat-form-field>
             <input matInput [(ngModel)]="userAccount.userName" placeholder="Nome Completo" name="userName">
@@ -28,7 +31,7 @@
         </mat-form-field>
 
     </form>
-    <button mat-raised-button (click)="cadastrarUsuario()" class="buttons">
+    <button mat-raised-button (click)="createUser()" class="buttons">
         <i class="material-icons">
             save
         </i>
